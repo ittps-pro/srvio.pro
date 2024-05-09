@@ -1,0 +1,4 @@
+interface cloud {
+
+  key: uuid;
+}
