@@ -1,0 +1,18 @@
+#cloud-config
+users:
+  - name: tpa
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    password: "Password"
+    # ssh-authorized-keys:
+    #   - ПУБЛИЧНЫЙ_КЛЮЧ username@server
+    #   - ПУБЛИЧНЫЙ_КЛЮЧ_2 username2@desktop
+
+package_update: true
+packages:
+ - apache2
+ - mariadb-server
+ - mariadb-client
+ - cockpit
+ - cockpit-machines
